@@ -1,0 +1,22 @@
+[
+    {
+      "CategoryName": "accounting and finance",
+      "CategoryLogo": "business 1.png",
+      "JobAvaiblity": "300+ job avaiable"
+    },
+    {
+      "CategoryName": "Creative design",
+      "CategoryLogo": 1,
+      "JobAvaiblity": "150+ job avaiable"
+    },
+    {
+      "CategoryName": "Marketing And Sales",
+      "CategoryLogo": 2,
+      "JobAvaiblity": "200+ job avaiable"
+    },
+    {
+      "CategoryName": "Engineering Job",
+      "CategoryLogo": 3,
+      "JobAvaiblity": "224+ job avaiable"
+    }
+  ]
