@@ -1,10 +1,22 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
+import Details from '../Details/Details';
 
 const Statistics = () => {
+    const details=useLoaderData();
+    // console.log(details);
     return (
-        <div>
-            <h2>statistics</h2>
+        <div className=''>
+            <h1 className='text-center font-bold text-3xl pt-10 '>Job Details</h1>
+            {
+                details.map(detail=><Details
+                    key={detail.id} 
+                    detail={detail}
+                ></Details>)
+            }
+
         </div>
+    
     );
 };
 

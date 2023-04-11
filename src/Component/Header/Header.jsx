@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
+        <div className=''>
         <div className='mx-auto mt-10'>
            <div className='flex justify-evenly'>
             <h2 className='text-2xl font-bold'>ProCarrer</h2>
@@ -16,6 +17,7 @@ const Header = () => {
             <button className='bg-blue-600 py-2 px-3 rounded-md text-white'>Start Applying </button>
 
            </div>
+        </div>
         </div>
     );
 };

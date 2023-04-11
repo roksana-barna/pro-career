@@ -9,7 +9,7 @@ import logo4 from "../../assets/Icons/chip 1.png";
 
 
 const Category = ({category}) => {
-    console.log(category)
+    // console.log(category)
     return (
         <div className=''>
             <h2 className='font-bold text-3xl py-6 mt-10 text-center '>Job Category List</h2>

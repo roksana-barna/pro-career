@@ -1,7 +1,7 @@
 [
     {
       "id": "6433bb1df5b5a8c0844fc2c2",
-      "CompanyLogo": "google-1-1 1.png",
+      "CompanyLogo":"https://cdn.telanganatoday.com/wp-content/uploads/2022/04/Google-multisearch-tool-to-help-users-search-with-photos.jpg",
       "JobTitle":"Technical Database Engineer",
       "CompanyName":"Google LLC",
       "Remote": "Remote",
@@ -18,7 +18,7 @@
     },
     {
       "id": "6433bb1da2a226ef71b79ca1",
-      "CompanyLogo": 1,
+      "CompanyLogo":"https://www.shutterstock.com/image-photo/aachen-germany-october-2017-netflix-260nw-729647704.jpg",
       "JobTitle": "Senior Product Designer",
       "CompanyName":"Netflix",
       "Remote": "remote",
@@ -35,7 +35,7 @@
     },
     {
       "id": "6433bb1df5539cbdd8db29b8",
-      "CompanyLogo": 2,
+      "CompanyLogo": "https://logowik.com/content/uploads/images/tesla.jpg",
       "JobTitle": "Software Engineer",
       "CompanyName": "Tesla",
       "Remote": "remote",
@@ -53,7 +53,7 @@
     },
     {
       "id": "6433bb1d209230df2126ff63",
-      "CompanyLogo": 3,
+      "CompanyLogo": "https://cdn.telanganatoday.com/wp-content/uploads/2022/04/Google-multisearch-tool-to-help-users-search-with-photos.jpg",
       "JobTitle": "Technical Database Engineer",
       "CompanyName":"Google LLC",
       "Remote":"Remote",
@@ -71,7 +71,7 @@
    
     {
         "id": "6433bb1d43b96ccc9c8592d6",
-        "CompanyLogo": 4,
+        "CompanyLogo":  "https://logowik.com/content/uploads/images/tesla.jpg",
         "JobTitle": " front end Devloper",
         "CompanyName": "Tesla",
         "Remote": "remote",
@@ -88,7 +88,7 @@
       },
       {
         "id": "6433bb1d43b96ccc9c8592d6",
-        "CompanyLogo": 4,
+        "CompanyLogo": "https://cdn.telanganatoday.com/wp-content/uploads/2022/04/Google-multisearch-tool-to-help-users-search-with-photos.jpg",
         "JobTitle": "network engineer",
         "CompanyName": "Tesla",
         "Remote": "remote",
