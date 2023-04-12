@@ -15,10 +15,15 @@ const Details = () => {
     },[jobData,id])
     return (
         <div>
+            <div>
             <h2 className=' text-2xl  text-center text-blue font-bold py-5'>job details</h2>
+
+            </div>
+           
+            <div> <h2></h2></div>
            
             <Show  detail={detail}></Show>
-            <div>{id}</div>
+    
             
         </div>
     );
