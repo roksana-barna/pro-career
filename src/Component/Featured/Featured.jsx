@@ -12,7 +12,7 @@ const Featured = ({job,details}) => {
     // console.log(details)
     // console.log(addToViewDetails)
    
- 
+//  const  id=job.id;
     return (
         < div>
             <div className='border border-slate-400 mr-10 mt-10 p-5'>
@@ -31,18 +31,8 @@ const Featured = ({job,details}) => {
                 </div>
 
 
-                <button  className='bg-blue-600 py-2 px-3 rounded-md text-white'><Link to='/detail/${id}'>View Details</Link> </button>
-                {/* {
-                    details.map(detail=><Details
-                    key={detail.id}
-                    detail={detail}
-                    ></Details>
-                        )
-                    } */}
-                
-                
-                
-                
+                <button  className='bg-blue-600 py-2 px-3 rounded-md text-white'><Link to={`'/detail/${job.id}'`}>View Details</Link> </button>
+              
             </div>
         </div>
     );

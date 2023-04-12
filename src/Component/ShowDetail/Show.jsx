@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { CurrencyDollarIcon} from '@heroicons/react/24/solid'
+import Applied from '../Applied Jobs/Applied';
+// import { Link } from 'react-router-dom';
 
 
 const Show = ({ detail }) => {
     // console.log(detail)
     const { JobTitle, JobDescription, JobResponsibility, Salary, EducationaRequirements, Experiences, email, Location, phone
     } = detail
-
+    
+      
+    
     return (
         <div className='grid grid-cols-2'>
             <div className='ml-20'>
@@ -32,6 +36,8 @@ const Show = ({ detail }) => {
                 }</p>
                 <p>Address{Location}</p>
                 <button className='bg-blue-700 text-white p-3 px-6 mt-6'>Apply Now</button>
+                
+
 
             </div>
         </div>

@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// import Applied from '../Applied Jobs/Applied';
 
 const Header = () => {
+       
     return (
         <div className=''>
         <div className='mx-auto mt-10'>
@@ -14,7 +16,8 @@ const Header = () => {
                 <Link className='mx-5' to = '/blog'>Blog</Link>
 
             </nav>
-            <button className='bg-blue-600 py-2 px-3 rounded-md text-white'>Start Applying </button>
+            <button  className='bg-blue-600 py-2 px-3 rounded-md text-white'>Start Applying </button>
+           
 
            </div>
         </div>
