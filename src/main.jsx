@@ -11,6 +11,10 @@ import Home from './Component/Home/Home';
 import Statistics from './Component/Statistics/Statistics';
 import Blog from './Component/Blog/Blog';
 import Applied from './Component/Applied Jobs/Applied';
+import Details from './Component/Details/Details';
+// import Details from './Component/Details/Details';
+// import Show from './Component/ShowDetail/Show';
+// import Details from './Component/Details/Details';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -19,13 +23,13 @@ const router = createBrowserRouter([
       {
       path:'/',
       element:<Home></Home>,
-      loader:()=>fetch('Category.json'),
-      // loader:()=>fetch('jobs.json')
+      loader:()=>fetch('Category.json')
+     
       },
       {
         path:'/statistics',
-        element:<Statistics></Statistics>,
-        loader:()=>fetch('Jobs.json')
+        element:<Statistics></Statistics>
+      
         },
         {
           path:'/applied',
@@ -35,6 +39,17 @@ const router = createBrowserRouter([
             path:'/blog',
             element:<Blog></Blog>
             },
+            {
+              path:'/detail/:id',
+              element:<Details></Details>,
+              loader:()=>fetch('Jobs.json')
+            }
+              // {
+              // path:'/detail/:detailId',
+              // element:
+              // loader:({params})=>fetch(`Jobs.json${params.detailId}`)
+              // },
+
     ]
   },
 ]);

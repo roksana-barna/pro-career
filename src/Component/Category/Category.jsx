@@ -17,7 +17,7 @@ const Category = ({category}) => {
             <div className='flex justify-center gap-5 mt-9'>
                 <div className='bg-gray-200 p-7'>
                  <img src={logo} alt="" />
-                 <h3 className='font-bold mt-7'>{ category[0].CategoryName}</h3>
+                 <h3 className='font-bold mt-7'>{ category[0]?.CategoryName}</h3>
                  <p className='font-normal text-gray-400'>{category[0].JobAvaiblity}</p>
                 </div>
                 <div className='bg-gray-200 p-7'>

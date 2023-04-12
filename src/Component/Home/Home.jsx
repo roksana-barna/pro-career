@@ -3,7 +3,8 @@ import img from "../../assets/All Images/P3OLGJ1 copy 1.png";
 import Category from '../Category/Category';
 import { useLoaderData } from 'react-router-dom';
 import Featured from '../Featured/Featured';
-// import Featured from '../Featured/Featured';
+import Details from '../Details/Details';
+
 
 const Home = () => {
     const [jobs,setJobs]=useState([])
@@ -11,10 +12,20 @@ const Home = () => {
         fetch('Jobs.json')
         .then(res => res.json())
         .then(data=>setJobs(data))
-    },[])
+    },[]);
     const category=useLoaderData();
-    // console.log(category)
-    // const img="../../assets/All Images/P3OLGJ1 copy 1.png";
+  
+    const [details,setDetails]=useState([])
+    useEffect(()=>{
+        fetch('Jobs.json')
+        .then(res=>res.json())
+        .then(data=>setDetails(data))
+    },[])
+    // const handleAddToDetail =details=>{
+    //     console.log(details)
+    // }
+//    console.log(details)
+   
     return (
 
        <div className=' mt-10 '>
@@ -36,15 +47,24 @@ const Home = () => {
            < h2 className='font-bold text-3xl py-6 mt-10 text-center '>Featured jobs</h2> 
                 <p className='text-center'>Explore thousands of job opportunities with all the information you need. Its your future</p>
             </div>
-        <div className='grid grid-cols-2'>
+        <div className='grid grid-cols-2 w-10/12 ml-40'>
         {
             jobs.map(job=>
             <Featured
             key={job.id}
             job={job}
+            // handleAddToDetail={handleAddToDetail}
+            // addToViewDetails={addToViewDetails}
+            details={details}
             >
             </Featured>)
         }
+        {/* {
+            details.map(detail=><Details
+            key={detail.id}
+            detail={detail}
+            ></Details>)
+        } */}
         </div>
        </div>
        
