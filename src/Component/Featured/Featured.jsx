@@ -8,7 +8,8 @@ import Details from '../Details/Details';
 
 
 
-const Featured = ({job,details}) => {
+const Featured = ({job}) => {
+    
     // console.log(details)
     // console.log(addToViewDetails)
    
@@ -31,7 +32,7 @@ const Featured = ({job,details}) => {
                 </div>
 
 
-                <button  className='bg-blue-600 py-2 px-3 rounded-md text-white'><Link to={`'/detail/${job.id}'`}>View Details</Link> </button>
+                <button  className='bg-blue-600 py-2 px-3 rounded-md text-white'><Link to={`/detail/${job.id}`}>View Details</Link> </button>
               
             </div>
         </div>

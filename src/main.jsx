@@ -12,6 +12,9 @@ import Statistics from './Component/Statistics/Statistics';
 import Blog from './Component/Blog/Blog';
 import Applied from './Component/Applied Jobs/Applied';
 import Details from './Component/Details/Details';
+import JobDetails from './Component/JobDetails';
+import NotFound from './Component/NotFound';
+// import Details from './Component/Details/Details';
 // import Details from './Component/Details/Details';
 // import Show from './Component/ShowDetail/Show';
 // import Details from './Component/Details/Details';
@@ -19,6 +22,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element:<Main></Main>,
+    errorElement: <NotFound></NotFound>,
     children:[
       {
       path:'/',
@@ -31,11 +35,11 @@ const router = createBrowserRouter([
         element:<Statistics></Statistics>
       
         },
-                 {
+        {
                   
              path:'/applied',
              element:<Applied></Applied>,
-             loader:()=>fetch('Jobs.json')
+             loader:()=>fetch('./Jobs.json')
 
           },
           {
@@ -45,8 +49,8 @@ const router = createBrowserRouter([
             {
               path:'/detail/:id',
               element:<Details></Details>,
-              loader:()=>fetch('Jobs.json')
-            }
+              loader:()=>fetch('../Jobs.json')
+            },
               // {
               // path:'/detail/:detailId',
               // element:

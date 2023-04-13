@@ -8,19 +8,32 @@ import Details from '../Details/Details';
 
 const Home = () => {
     const [jobs, setJobs] = useState([])
+    const [showMore, setShowMore] = useState('false');
     useEffect(() => {
         fetch('Jobs.json')
             .then(res => res.json())
-            .then(data => setJobs(data))
-    }, []);
+            .then(data => {
+                if(showMore === 'false'){
+                    setJobs(data?.slice(0,4));
+                }else{
+                    setJobs(data);
+                }
+            })
+    }, [showMore]);
+
+    const viewAllJobs = () =>{
+        setShowMore('true');
+    }
+
+    // console.log(jobs)
     const categorys = useLoaderData();
 
-    const [details, setDetails] = useState([])
-    useEffect(() => {
-        fetch('Jobs.json')
-            .then(res => res.json())
-            .then(data => setDetails(data))
-    }, [])
+    // const [details, setDetails] = useState([])
+    // useEffect(() => {
+    //     fetch('Jobs.json')
+    //         .then(res => res.json())
+    //         .then(data => setDetails(data))
+    // }, [])
     // const handleAddToDetail =details=>{
     //     console.log(details)
     // }
@@ -50,7 +63,8 @@ const Home = () => {
             <div className='flex justify-center  gap-5 mt-7'>
                 {
 
-                    categorys.map(category => <Category key={category.id}
+                    categorys.map(category => <Category
+                         key={category.id}
                         category={category}
                     ></Category>)
                 }
@@ -67,15 +81,19 @@ const Home = () => {
                         <Featured
                             key={job.id}
                             job={job}
+                            viewAllJobs="viewAllJobs"
                             // handleAddToDetail={handleAddToDetail}
                             // addToViewDetails={addToViewDetails}
-                            details={details}
+                        
                         >
                         </Featured>)
                 }
                
             </div>
+            <button onClick={() =>viewAllJobs() }  className='bg-blue-600 py-2 px-3 rounded-md text-white'>View All</button>
+              
         </div>
+
 
     );
 };

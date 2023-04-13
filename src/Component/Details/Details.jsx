@@ -1,18 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router-dom';
 import Show from '../ShowDetail/Show';
 
 const Details = () => {
-    const jobData=useLoaderData()
-    console.log(jobData)
-    const {id}=useParams();
+    const jobData = useLoaderData();
 
-    console.log(id)
-    const [detail,setDetails]=useState([])
-    useEffect(()=>{
-        const findData=jobData.find(data=>parseInt(data.id)===parseInt(data.id));
- setDetails(findData)
-    },[jobData,id])
+    const [details,setDetails] = useState([]);
+    const {id}=useParams();
+    useEffect(() => {
+        const findData = jobData?.find(data => parseInt(id) === parseInt(data.id));
+        setDetails(findData);
+    },[])
+    // console.log(details);
+
+    
+    
+
+
     return (
         <div>
             <div>
@@ -21,9 +25,19 @@ const Details = () => {
             </div>
            
             <div> <h2></h2></div>
-           
-            <Show  detail={detail}></Show>
-    
+           {/* {
+            details?.map(detail=><Show
+            key={detail.id}
+            detail={detail}
+            >
+            </Show>
+            
+           )}  */}
+            {/* // <Show  detail={detail}></Show> */}
+            
+            
+            <Show details={details}></Show>  
+
             
         </div>
     );

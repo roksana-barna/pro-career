@@ -3,7 +3,7 @@ import React from 'react';
 
 const Category = ({category}) => {
 
-    console.log(category)
+    // console.log(category)
     const {CategoryName,JobAvaiblity,CategoryLogo}=category;
     return (
         <div className="">

@@ -7,7 +7,7 @@ const Apply = ({data}) => {
     return (
         <div>
             {JobTitle}
-            
+        
         </div>
     );
 };
