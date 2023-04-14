@@ -7,12 +7,13 @@ const Details = () => {
 
     const [details,setDetails] = useState([]);
     const {id}=useParams();
+
     useEffect(() => {
         const findData = jobData?.find(data => parseInt(id) === parseInt(data.id));
         setDetails(findData);
     },[])
     // console.log(details);
-
+    
     
     
 
@@ -25,15 +26,7 @@ const Details = () => {
             </div>
            
             <div> <h2></h2></div>
-           {/* {
-            details?.map(detail=><Show
-            key={detail.id}
-            detail={detail}
-            >
-            </Show>
-            
-           )}  */}
-            {/* // <Show  detail={detail}></Show> */}
+          
             
             
             <Show details={details}></Show>  

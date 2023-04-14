@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import Applied from '../Applied Jobs/Applied';
 
 const Header = () => {
        
     return (
+        
         <div className=''>
         <div className='mx-auto mt-10'>
            <div className='flex justify-evenly'>

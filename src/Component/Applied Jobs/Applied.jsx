@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Apply from '../Applied items/Apply';
+import ApplyHeader from '../ApplyHeader/ApplyHeader';
+import image from "../../bgheader/modern-flowing-blue-wave-banner-white-background_1035-18960.avif";
 
 const Applied = () => {
     const allData=useLoaderData();
@@ -18,7 +20,10 @@ const Applied = () => {
     } , []);
     return (
         <div>
-            <h2>jobs</h2>
+            <ApplyHeader
+        title="Applied Jobs"
+        backgroundImage={image}
+      />
             {
                 applied.map(singledata=><Apply
                  key={singledata.id}

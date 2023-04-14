@@ -14,10 +14,8 @@ import Applied from './Component/Applied Jobs/Applied';
 import Details from './Component/Details/Details';
 import JobDetails from './Component/JobDetails';
 import NotFound from './Component/NotFound';
-// import Details from './Component/Details/Details';
-// import Details from './Component/Details/Details';
-// import Show from './Component/ShowDetail/Show';
-// import Details from './Component/Details/Details';
+import Apply from './Component/Applied items/Apply';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -51,11 +49,7 @@ const router = createBrowserRouter([
               element:<Details></Details>,
               loader:()=>fetch('../Jobs.json')
             },
-              // {
-              // path:'/detail/:detailId',
-              // element:
-              // loader:({params})=>fetch(`Jobs.json${params.detailId}`)
-              // },
+              
 
     ]
   },
