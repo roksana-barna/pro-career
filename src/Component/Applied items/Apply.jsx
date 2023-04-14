@@ -6,12 +6,12 @@ import { Link } from 'react-router-dom';
 
 
 const Apply = ({ data }) => {
-    const { CompanyLogo, JobTitle, Salary, CompanyName, FullTime, Remote, Location } = data;
-
-
+    const { CompanyLogo, JobTitle, Salary, CompanyName, FullTime, RemoteOrOnsite, Location } = data;
+   
     // console.log(data)
     return (
-        <div className='md:flex border border-sky-200 mt-5 w-8/12  ml-40'>
+        
+        <div className='md:flex border border-sky-200 mt-5 w-8/12 ml-40'>
             <div className='border border-blue-400'>
                 <img className='w-40 mt-7' src={CompanyLogo} alt="" />
             </div>
@@ -20,7 +20,7 @@ const Apply = ({ data }) => {
                 <h3 className='font-normal py-2'>{CompanyName}</h3>
 
                 <div className='flex'>
-                    <p className='border border-blue-400 px-2 rounded py-1 text-blue-500'>{Remote}</p>
+                    <p className='border border-blue-400 px-2 rounded py-1 text-blue-500'>{RemoteOrOnsite}</p>
                     <p className='border border-blue-400 px-2 rounded py-1 text-blue-500 ml-2'>{FullTime}</p>
 
 
@@ -36,7 +36,6 @@ const Apply = ({ data }) => {
             </div>
             <div>
             <button  className='bg-blue-600 px-3 py-2 mt-16 md:ml-60 rounded-md text-white'><Link to={`../detail/${data.id}`}> View Details</Link></button>
-
 
 
             </div>

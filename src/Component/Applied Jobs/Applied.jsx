@@ -5,25 +5,27 @@ import ApplyHeader from '../ApplyHeader/ApplyHeader';
 import image from "../../bgheader/modern-flowing-blue-wave-banner-white-background_1035-18960.avif";
 
 const Applied = () => {
-    const allData=useLoaderData();
-    const [applied, setApplied] = useState([]);
-    let finalData = [];
-    useEffect( () => {
-        const storeIds = JSON.parse(localStorage.getItem('applied-job'));
-        storeIds?.map(id => {
-            const getData = allData?.find(data => parseInt(id) === parseInt(data.id));
-            console.log(getData);
-            finalData.push(getData);
-        })
-        console.log(storeIds);
-        setApplied(finalData);
-    } , []);
+    const savedJobs=JSON.parse(localStorage.getItem('list'))
+    const [applied,setApplied]=useState(savedJobs)
+    
+    const handleFilter=(item)=>{
+        setApplied(item)
+
+        // console.log(finalData)
+        const  filter =savedJobs.filter(job=>job.RemoteOrOnsite==item)
+        setApplied(filter)
+
+    }
     return (
         <div>
             <ApplyHeader
         title="Applied Jobs"
         backgroundImage={image}
       />
+
+    <button className='border border-sky-100  bg-slate-500 text-white  ml-40 p-2' onClick={()=>handleFilter('Remote')}>remote</button>
+    <button className='border border-sky-100 bg-slate-500 text-white  p-2' onClick={()=>handleFilter('Onsite')}>Onsite</button>
+
             {
                 applied.map(singledata=><Apply
                  key={singledata.id}

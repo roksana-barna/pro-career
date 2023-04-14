@@ -15,41 +15,50 @@ import Details from './Component/Details/Details';
 import JobDetails from './Component/JobDetails';
 import NotFound from './Component/NotFound';
 import Apply from './Component/Applied items/Apply';
+import Remote from './Component/Remote/Remote';
+
+
+
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element:<Main></Main>,
+    element: <Main></Main>,
     errorElement: <NotFound></NotFound>,
-    children:[
+    children: [
       {
-      path:'/',
-      element:<Home></Home>,
-      loader:()=>fetch('Category.json')
-     
+        path: '/',
+        element: <Home></Home>,
+        loader: () => fetch('Category.json')
+
       },
       {
-        path:'/statistics',
-        element:<Statistics></Statistics>
-      
-        },
-        {
-                  
-             path:'/applied',
-             element:<Applied></Applied>,
-             loader:()=>fetch('../Jobs.json')
+        path: '/statistics',
+        element: <Statistics></Statistics>
 
-          },
-          {
-             path:'/blog',
-            element:<Blog></Blog>
-            },
-            {
-              path:'/detail/:id',
-              element:<Details></Details>,
-              loader:()=>fetch('../Jobs.json')
-            },
-              
+      },
+      {
+
+        path: '/applied',
+        element: <Applied></Applied>,
+        loader: () => fetch('/Jobs.json')
+
+      },
+      {
+        path: '/blog',
+        element: <Blog></Blog>
+      },
+      {
+        path: '/detail/:id',
+        element: <Details></Details>,
+        loader: () => fetch('/Jobs.json')
+      },
+     {
+      path:'/remote',
+      element:<Remote></Remote>,
+      loader:()=>fetch('/Jobs.json')
+     }
+
 
     ]
   },
@@ -58,6 +67,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )

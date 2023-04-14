@@ -10,7 +10,7 @@ const Home = () => {
     const [jobs, setJobs] = useState([])
     const [showMore, setShowMore] = useState('false');
     useEffect(() => {
-        fetch('Jobs.json')
+        fetch('/Jobs.json')
             .then(res => res.json())
             .then(data => {
                 if(showMore === 'false'){
@@ -51,7 +51,7 @@ const Home = () => {
             <h2 className='font-bold text-3xl py-6 mt-10 text-center '>Job Category List</h2>
             <p className='text-center'>Explore thousands of job opportunities with all the information you need. Its your future</p>
             <div className='md:flex justify-center  gap-5 sm:gap-4 mt-7'>
-                {
+                { categorys && 
 
                     categorys.map(category => <Category
                          key={category.id}

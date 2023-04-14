@@ -10,19 +10,16 @@ const Show = ({ details }) => {
     const {id, CompanyLogo,JobTitle,CompanyName,Remote,Onsite,Location,FullTime,Salary,JobDescription,JobResponsibility,EducationaRequirements,email,phone,Experiences }=details;
 
     const apply = (id) =>{
-        let item = [];
-        const getStorageItem = JSON.parse(localStorage.getItem('applied-job'));
-        if(getStorageItem)
-        {
-            item = [...getStorageItem];
+        const store = JSON.parse(localStorage.getItem("list")) || [];
+        
+        if(store.find(job=>job.id==id)){
+
         }
-        if(item.includes(id))
-        {
-            toast("Already saved!");
-            return;
+        else{
+            store.push(details);
+        localStorage.setItem("list", JSON.stringify(store));
+            
         }
-        item.push(id);
-        localStorage.setItem('applied-job', JSON.stringify(item));
 
     }
       
