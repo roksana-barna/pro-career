@@ -4,48 +4,46 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 const Statistics = () => {
     let markArray = [
         { 
-          name: "html",
-          assignment: "assingment 1",
-          mark: 46
+          name:  "assingment 1",
+          totalMark:50,
+          myMark: 46
         },
         { 
-          name: "css",
-          assignment: "assingment 2",
-          mark: 58
+          name:  "assingment 2",
+          totalMark:60,
+          myMark: 58
         },
         { 
-          name: "html-css",
-          assignment: "assingment 3",
-          mark: 48
+          name:  "assingment 3",
+          totalMark:50,
+          myMark: 48
         },
         { 
-          name: "api",
-          assignment: "assingment 4",
-          mark: 35 
+          name:  "assingment 4",
+          totalMark:50,
+          myMark: 35
         },
         { 
-          name: "js",
-          assignment: "assingment 5",
-          mark: 57
+          name:  "assingment 5",
+          totalMark:60,
+          myMark: 58
         },
         { 
-          name: "js",
-          assignment: "assingment 6",
-          mark: 52 
+          name:  "assingment 6",
+          totalMark:60,
+          myMark: 52
         },
-        { 
-          name: "react",
-          assignment: "assingment 7",
-          mark: 60 
+        {  
+          name:  "assingment 7",
+          totalMark:60,
+          myMark: 60 
+         
         },
-        { 
-          name: "debug",
-          assignment: "assingment 8",
-          mark:60
+        { name:  "assingment 7",
+        totalMark:60,
+        myMark: 60
         }
       ];
-      
-      
     return (
      
         <div>
@@ -56,16 +54,12 @@ const Statistics = () => {
             height={500}
             data={markArray}>
             
-            <XAxis dataKey="assignment" />
-            <Area type="monotone" dataKey="uv" stroke="#8884d8" fill="#8884d8" />
+            <XAxis dataKey="totalMark" />
+            <Area type="monotone" dataKey="myMark" stroke="#8884d8" fill="#8884d8" />
 
 
-          <YAxis  dataKey= "mark"/>
+          <YAxis  dataKey= "myMark"/>
           <Tooltip />  
-
-
-
-
             </AreaChart>
             </ResponsiveContainer>
         </div>
