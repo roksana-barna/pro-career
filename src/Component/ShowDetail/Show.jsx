@@ -1,5 +1,4 @@
 import React  from 'react';
-import { CurrencyDollarIcon} from '@heroicons/react/24/solid'
 import Applied from '../Applied Jobs/Applied';
 import { Link } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
@@ -31,7 +30,7 @@ const Show = ({ details }) => {
     return (
         <div>
             <ToastContainer />
-            <div className='grid grid-cols-2'>
+            <div className='md:grid grid-cols-2'>
             <div className='ml-20'>
                 <h2> <span className='font-bold'>Job Description</span>:{JobDescription}</h2>
 
@@ -46,14 +45,13 @@ const Show = ({ details }) => {
                 <h2 className='font-bold'>Job details</h2>
 
                 
-                <p> < CurrencyDollarIcon className="h-6 w-6 text-blue-500 " />salary:{Salary}</p>
-                <p>JobTitle:{JobTitle}</p>
+                <p><span className='font-bold '>Salary</span>:{Salary}</p>
+                <p ><span className='font-bold '>Job Title</span>:{JobTitle}</p>
                 <h2><span className='font-bold py-5'>Contact Information</span></h2>
-                <p>Phone{phone
+                <p><span className='font-bold '>Phone</span>:{phone}</p>
+                <p><span className='font-bold '>email</span>:{email
                 }</p>
-                <p>email{email
-                }</p>
-                <p>Address{Location}</p>
+                <p><span className='font-bold '>Address</span>:{Location}</p>
                 <button onClick={() => apply(id)} className='bg-blue-700 text-white p-3 px-6 mt-6'>Apply Now</button>
                 
 

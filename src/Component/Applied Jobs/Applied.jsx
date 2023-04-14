@@ -12,7 +12,7 @@ const Applied = () => {
         const storeIds = JSON.parse(localStorage.getItem('applied-job'));
         storeIds?.map(id => {
             const getData = allData?.find(data => parseInt(id) === parseInt(data.id));
-            // console.log(getData);
+            console.log(getData);
             finalData.push(getData);
         })
         console.log(storeIds);

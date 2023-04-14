@@ -1,6 +1,7 @@
 import React from 'react';
 import { MapPinIcon} from '@heroicons/react/24/solid';
 import { CurrencyDollarIcon } from '@heroicons/react/24/solid'
+import { Link } from 'react-router-dom';
 // import { Link, useLoaderData } from 'react-router-dom';
 
 
@@ -8,9 +9,9 @@ const Apply = ({ data }) => {
     const { CompanyLogo, JobTitle, Salary, CompanyName, FullTime, Remote, Location } = data;
 
 
-    console.log(data)
+    // console.log(data)
     return (
-        <div className='flex border border-sky-200 mt-5 w-8/12  ml-40'>
+        <div className='md:flex border border-sky-200 mt-5 w-8/12  ml-40'>
             <div className='border border-blue-400'>
                 <img className='w-40 mt-7' src={CompanyLogo} alt="" />
             </div>
@@ -34,7 +35,7 @@ const Apply = ({ data }) => {
 
             </div>
             <div>
-            <button  className='bg-blue-600 px-3 py-2 mt-16 ml-60 rounded-md text-white'>View Details</button>
+            <button  className='bg-blue-600 px-3 py-2 mt-16 md:ml-60 rounded-md text-white'><Link to={`../detail/${data.id}`}> View Details</Link></button>
 
 
 

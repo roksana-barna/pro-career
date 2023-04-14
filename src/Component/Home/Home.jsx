@@ -28,17 +28,7 @@ const Home = () => {
     // console.log(jobs)
     const categorys = useLoaderData();
 
-    // const [details, setDetails] = useState([])
-    // useEffect(() => {
-    //     fetch('Jobs.json')
-    //         .then(res => res.json())
-    //         .then(data => setDetails(data))
-    // }, [])
-    // const handleAddToDetail =details=>{
-    //     console.log(details)
-    // }
-    //    console.log(details)
-
+    
     return (
 
         <div className=' mt-10 '>
@@ -60,7 +50,7 @@ const Home = () => {
 
             <h2 className='font-bold text-3xl py-6 mt-10 text-center '>Job Category List</h2>
             <p className='text-center'>Explore thousands of job opportunities with all the information you need. Its your future</p>
-            <div className='flex justify-center  gap-5 mt-7'>
+            <div className='md:flex justify-center  gap-5 sm:gap-4 mt-7'>
                 {
 
                     categorys.map(category => <Category
@@ -70,27 +60,24 @@ const Home = () => {
                 }
             </div>
 
-            {/* <Category category={category}></Category> */}
             <div>
                 < h2 className='font-bold text-3xl py-6 mt-10 text-center '>Featured jobs</h2>
                 <p className='text-center'>Explore thousands of job opportunities with all the information you need. Its your future</p>
             </div>
-            <div className='grid grid-cols-2 w-10/12 ml-40'>
+            <div className='grid md:grid-cols-2 w-10/12  ml-40'>
                 {
                     jobs.map(job =>
                         <Featured
                             key={job.id}
                             job={job}
                             viewAllJobs="viewAllJobs"
-                            // handleAddToDetail={handleAddToDetail}
-                            // addToViewDetails={addToViewDetails}
-                        
+                          
                         >
                         </Featured>)
                 }
                
             </div>
-            <button onClick={() =>viewAllJobs() }  className='bg-blue-600 py-2 px-3 rounded-md text-white'>View All</button>
+            <button onClick={() =>viewAllJobs() }  className='bg-blue-600 py-2 px-3 rounded-md text-white ml-96'>View All</button>
               
         </div>
 

@@ -7,7 +7,7 @@ const Header = () => {
         
         <div className=''>
         <div className='mx-auto mt-10'>
-           <div className='flex justify-evenly'>
+           <div className=' md:flex justify-evenly'>
             <h2 className='text-2xl font-bold'>ProCarrer</h2>
             <nav className='font-bold text-blue-600 hover:text-red-400'>
                 <Link  className='mx-5' to = '/'>Home</Link>
